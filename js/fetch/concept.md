@@ -13,3 +13,25 @@ fetch()的功能与 XMLHttpRequest 基本相同，但有三个主要的差异。
 1. fetch使用 Promise，XMLHttpRequest使用回调函数；
 2. 采用模块化设计，API 分散在多个对象上（Response 对象、Request 对象、Headers 对象），更合理一些； XMLHttpRequest 是定义在实例对象 xhr上；
 3. fetch()通过数据流（Stream 对象）处理数据，可以分块读取，有利于提高网站性能表现，减少内存占用，对于请求大文件或者网速慢的场景相当有用。XMLHTTPRequest 对象不支持数据流，所有的数据必须放在缓存里，不支持分块读取，必须等待全部拿到后，再一次性吐出来
+
+```
+fetch('https://api.github.com/users/jiangyanghe')
+  .then(response => response.json())
+  .then(json => console.log(json))
+  .catch(err => console.log('Request Failed', err)); 
+```
+```
+async function getJSON() {
+  let url = 'https://api.github.com/users/jiangyanghe';
+  try { // await语句必须放在try...catch里面，这样才能捕捉异步操作中可能发生的错误。
+    let response = await fetch(url);
+    return await response.json();
+  } catch (error) {
+    console.log('Request Failed', error);
+  }
+}
+```
+<br>
+
+### Response: 处理HTTP回应
+
