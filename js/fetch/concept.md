@@ -1,5 +1,6 @@
 # Fetch API 教程
 ### 参考资料
+* [MDN Fetch_API](https://developer.mozilla.org/zh-CN/docs/Web/API/Fetch_API)
 * [阮一峰Fetch 教程](https://www.ruanyifeng.com/blog/2020/12/fetch-tutorial.html)
 * [XMLHttpRequest 教程](https://developer.mozilla.org/zh-CN/docs/Web/API/XMLHttpRequest)
 * [iyb-fetch](https://git.baoyun.ltd/iyunbao/frontend/iyb-fetch)
