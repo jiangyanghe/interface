@@ -3,6 +3,7 @@
 * [MDN Fetch_API](https://developer.mozilla.org/zh-CN/docs/Web/API/Fetch_API)
 * [阮一峰Fetch 教程](https://www.ruanyifeng.com/blog/2020/12/fetch-tutorial.html)
 * [XMLHttpRequest 教程](https://developer.mozilla.org/zh-CN/docs/Web/API/XMLHttpRequest)
+* [知乎 fetch](https://zhuanlan.zhihu.com/p/53849170)
 * [iyb-fetch](https://git.baoyun.ltd/iyunbao/frontend/iyb-fetch)
 
 ### 概念：fetch 是XMLHttpRequest 的升级版，用于在JavaScript中发出http请求
@@ -184,3 +185,5 @@ while(true) {
 上面示例中，response.body.getReader()方法返回一个遍历器。这个遍历器的read()方法每次返回一个对象，表示本次读取的内容块。
 
 这个对象的done属性是一个布尔值，用来判断有没有读完；value属性是一个 arrayBuffer 数组，表示内容块的内容，而value.length属性是当前块的大小
+<br><br>
+## fetch()的第二个参数：定制 HTTP 请求
