@@ -17,7 +17,7 @@
 
   fetch('/data?name=fe', {
     method: 'GET',
-    signal,
+    signal, // signal属性指定一个 AbortSignal 实例，用于取消fetch()请求
   })
     .then(response => response.json())
     .then(resData => {

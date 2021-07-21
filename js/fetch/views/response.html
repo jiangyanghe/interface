@@ -35,10 +35,14 @@
   // 客户端
   const headers = new Headers({
     'X-Token': 'fe9-token-from-frontend',
+
   });
   const request = new Request('/api/response', {
     method: 'GET',
     headers,
+    // referrer: '', // 不传
+    referrer: '1234', // 原有的链接加上1234 http://127.0.0.1:4000/1234
+    referrerPolicy:'no-referrer',
   });
 
   // 这里我们先发起一个请求试一试
