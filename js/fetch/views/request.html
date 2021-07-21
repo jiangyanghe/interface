@@ -28,10 +28,13 @@
     method: 'GET',
     headers,
   });
-  console.log(request); // Request {method: "GET", url: "http://127.0.0.1:4000/api/request", headers: Headers, destination: "", referrer: "about:client", …}
-  console.log(request.method); // GET
-  console.log(request.mode); // cors
-  console.log(request.credentials); // same-origin
+  console.log('request-->', request); // Request {method: "GET", url: "http://127.0.0.1:4000/api/request", headers: Headers, destination: "", referrer: "about:client", …}
+  console.log('method-->', request.method); // GET
+  console.log('mode-->', request.mode); // cors
+  console.log('credentials-->', request.credentials); // same-origin
+
+  printHeaders(request.headers)
+
 
   // 如果你想打印headers信息，可以调用 printHeaders(request.headers)
 
