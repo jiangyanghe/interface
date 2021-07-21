@@ -69,6 +69,7 @@ app.use(async (ctx, next) => {
   if (method === 'GET') {
     ctx.response.status = 200;
     const reg = /^\/api/;
+    console.log('2222', ctx.url)
     if (reg.test(url)) {
       ctx.set('x-token', 'fe9-token-from-backend');
       ctx.body = {

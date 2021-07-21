@@ -28,7 +28,7 @@
     method: 'GET',
     headers,
     credentials: 'include',
-    // mode: 'no-cors'
+    mode: 'no-cors' //请求方法只限于 GET、POST 和 HEAD，并且只能使用有限的几个简单标头，不能添加跨域的复杂标头，相当于提交表单所能发出的请求。
   });
   console.log(request); // Request {method: "GET", url: "http://127.0.0.1:4000/api/request", headers: Headers, destination: "", referrer: "about:client", …}
   console.log(request.method); // GET
