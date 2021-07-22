@@ -24,11 +24,11 @@
   const headers = new Headers({
     'X-Token': 'fe9',
   });
-  const request = new Request('http://127.0.0.1:4000/api/request', {
+  const request = new Request('http://127.0.0.1:4000/api/cors_request', {
     method: 'GET',
     headers,
     credentials: 'include', // 不管同源请求，还是跨域请求，一律发送 Cookie。
-    mode: 'no-cors' //请求方法只限于 GET、POST 和 HEAD，并且只能使用有限的几个简单标头，不能添加跨域的复杂标头，相当于提交表单所能发出的请求。
+    // mode: 'cors' //请求方法只限于 GET、POST 和 HEAD，并且只能使用有限的几个简单标头，不能添加跨域的复杂标头，相当于提交表单所能发出的请求。
   });
   console.log(request); // Request {method: "GET", url: "http://127.0.0.1:4000/api/request", headers: Headers, destination: "", referrer: "about:client", …}
   console.log(request.method); // GET
@@ -40,6 +40,7 @@
     .then(response => response.json())
     .then(resData => {
       const { status, data } = resData;
+      console.log('resData===', resData);
       if (!status) {
         window.alert('发生了一个错误！');
         return;

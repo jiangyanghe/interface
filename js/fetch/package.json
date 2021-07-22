@@ -5,8 +5,8 @@
   "main": "headers.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js",
-    "server": "node core.js"
+    "start": "nodemon server.js",
+    "server": "nodemon core.js"
   },
   "author": "",
   "license": "ISC",

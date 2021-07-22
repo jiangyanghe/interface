@@ -20,6 +20,7 @@
   }
 </script>
 <script>
+  document.cookie='name=jiang';
   // 客户端
   const headers = new Headers({
     'X-Token': 'fe9',
@@ -33,17 +34,17 @@
   /*
    * 如果你想打印headers信息，可以调用 printHeaders(request.headers)
    */
-  // fetch('/data?name=fe', {
-  //   method: 'GET',
-  //   headers,
-  // })
-  //   .then(response => response.json())
-  //   .then(resData => {
-  //     const { status, data } = resData;
-  //     if (!status) {
-  //       window.alert('发生了一个错误！');
-  //       return;
-  //     }
-  //     document.getElementById('fetch').innerHTML = data;
-  //   });
+  fetch('http://127.0.0.1:4000/data?name=fe', {
+    method: 'GET',
+    headers,
+  })
+    .then(response => response.json())
+    .then(resData => {
+      const { status, data } = resData;
+      if (!status) {
+        window.alert('发生了一个错误！');
+        return;
+      }
+      document.getElementById('fetch').innerHTML = data;
+    });
 </script>

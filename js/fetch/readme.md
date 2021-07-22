@@ -12,5 +12,3 @@ $ node server.js
 
 如果需要使用跨域版本，需要同时使用 node cors.js 命令来启动 cors 服务，默认端口为4001， 请在浏览器中输入 http://127.0.0.1:4000/request 。
 <br><br>
-
-在使用 cors.js 模拟跨域错误时，如果你想避免控制台提示的错误，请关注 server.js 文件，将 第58行中的 * 替换成第53行的 origin

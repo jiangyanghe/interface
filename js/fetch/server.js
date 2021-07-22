@@ -55,12 +55,13 @@ app.use(function(ctx, next) {
     ctx.response.status = 200;
   }
   ctx.response.set({
-    'Access-Control-Allow-Origin': '*',
+    // 'Access-Control-Allow-Origin': '*',
+    'Access-Control-Allow-Origin': 'http://127.0.0.1:4001',
     'Access-Control-Allow-Methods': 'GET,PUT,POST,DELETE,OPTIONS',
     'Access-Control-Allow-Headers': 'Content-Type, X-Requested-With, x-token',
     'Access-Control-Allow-Credentials': 'true',
   });
-  ctx.cookies.set('org', 'fe9');
+  ctx.cookies.set('org', 'fe91');
   return next();
 });
 
@@ -80,7 +81,11 @@ app.use(async (ctx, next) => {
         </h3>
         <h3>
           x-token: ${headers['x-token']}
-        </h3>`,
+        </h3>
+        <h3>
+          cookie: ${headers['cookie']}
+        </h3>
+        `,
       };
     }
   }
