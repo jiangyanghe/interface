@@ -1,1 +1,1 @@
-# tsconfig.json 指南
+# [tsconfig.json 指南](https://segmentfault.com/a/1190000022809326/)
