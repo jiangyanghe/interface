@@ -41,6 +41,7 @@ function App() {
       <Form>
         <Field name="username" />
         <ErrorMessage name="username" />
+        <Field name="contant" as="textarea" />
         <Checkbox value="足球" label="足球" name="hobbies"/>
         <Checkbox value="篮球" label="篮球" name="hobbies"/>
         <Checkbox value="橄榄球" label="橄榄球" name="hobbies"/>
