@@ -86,6 +86,5 @@ module.exports = {
         }
       ]
     }),
-    new ReactRefreshWebpackPlugin()
   ]
 }
