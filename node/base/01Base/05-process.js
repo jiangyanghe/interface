@@ -1,5 +1,9 @@
 // 1 资源： cpu 内存
-// console.log(process.memoryUsage())
+console.log(process.memoryUsage())
+console.log(process.arch)
+console.log(process.env.NODE_ENV)
+console.log(process.platform)
+console.log(process.env.PATH)
 // console.log(process.cpuUsage())
 
 // 2 运行环境：运行目录、node环境、cpu架构、用户环境、系统平台
